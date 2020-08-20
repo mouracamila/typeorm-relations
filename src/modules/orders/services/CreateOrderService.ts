@@ -4,13 +4,14 @@ import AppError from '@shared/errors/AppError';
 
 import IProductsRepository from '@modules/products/repositories/IProductsRepository';
 import ICustomersRepository from '@modules/customers/repositories/ICustomersRepository';
-import { exists } from 'fs';
+
 import Order from '../infra/typeorm/entities/Order';
 import IOrdersRepository from '../repositories/IOrdersRepository';
 
 interface IProduct {
   id: string;
   quantity: number;
+  price: number;
 }
 
 interface IRequest {
@@ -21,7 +22,7 @@ interface IRequest {
 @injectable()
 class CreateOrderService {
   constructor(
-    @inject('OrderRepository')
+    @inject('OrdersRepository')
     private ordersRepository: IOrdersRepository,
 
     @inject('ProductsRepository')

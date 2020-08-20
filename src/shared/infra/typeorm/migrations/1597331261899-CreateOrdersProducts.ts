@@ -33,7 +33,7 @@ export default class CreateOrdersProducts1597331261899
             type: 'integer',
           },
           {
-            name: 'create_at',
+            name: 'created_at',
             type: 'timestamp',
             default: 'now()',
           },
