@@ -11,6 +11,7 @@ import OrdersProducts from '@modules/orders/infra/typeorm/entities/OrdersProduct
 
 @Entity('products')
 class Product {
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column()
