@@ -13,7 +13,6 @@ This application allows the creation of customers, products and orders, and the 
 - TypeScript
 - NodeJs
 - Typeorm
-- Express
 
 ## How to use
 
